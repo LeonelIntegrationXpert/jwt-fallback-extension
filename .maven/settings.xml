@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===============================================================================
+  ⚙️ MuleSoft settings.xml (Deploy no Exchange)
+===============================================================================
+  ✍️ Autor: Leonel Dorneles Porto
+  📧 Email: leoneldornelesporto@outlook.com.br
+  ☁️ Ambiente: Connected App (Ambiente Trial)
+===============================================================================
+  🔐 Este arquivo define:
+    - Credenciais para publicação no Anypoint Exchange via Maven.
+    - Repositórios padrão da MuleSoft.
+    - Plugin Group necessário para ferramentas Mule.
+===============================================================================
+  ❗ ATENÇÃO:
+    ➤ Substitua as credenciais de client_id e client_secret abaixo
+      quando estiver usando ambiente **produtivo**.
+    ➤ O formato da senha exige:
+        client_id~?~client_secret
+===============================================================================
+-->
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <!--
+  ============================================================================
+  🔐 CREDENCIAIS PARA PUBLICAÇÃO NO EXCHANGE
+  ============================================================================
+    - ID do servidor precisa bater com o valor do <distributionManagement> no POM.
+    - Formato da senha: client_id~?~client_secret
+    - Exemplo abaixo usa ambiente Trial do Leonel Dorneles Porto.
+  -->
+  <servers>
+    <server>
+      <id>anypoint-exchange-v3</id>
+      <username>~~~Client~~~</username>
+      <password>9fd0d4f3ba7749e98beb8177116fb492~?~bCD2fa42dE1048Bc8b7876e5bAE8B89a</password>
+    </server>
+    <server>
+      <id>Exchange2</id>
+      <username>~~~Client~~~</username>
+      <password>9fd0d4f3ba7749e98beb8177116fb492~?~bCD2fa42dE1048Bc8b7876e5bAE8B89a</password>
+    </server>
+    <server>
+      <id>exchange-server</id>
+      <username>~~~Client~~~</username>
+      <password>9fd0d4f3ba7749e98beb8177116fb492~?~bCD2fa42dE1048Bc8b7876e5bAE8B89a</password>
+    </server>
+  </servers>
+
+  <!--
+  ============================================================================
+  🧰 PLUGIN GROUPS PARA RECONHECER PLUGINS MULESOFT
+  ============================================================================
+  -->
+  <pluginGroups>
+    <pluginGroup>org.mule.tools</pluginGroup>
+  </pluginGroups>
+
+  <!--
+  ============================================================================
+  🌍 REPOSITÓRIOS MULESOFT PARA RESOLVER DEPENDÊNCIAS
+  ============================================================================
+  -->
+  <profiles>
+    <profile>
+      <id>all-mule-repositories</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+
+        <!-- Repositório público MuleSoft: archetypes, runtime, etc. -->
+        <repository>
+          <id>archetype</id>
+          <name>MuleSoft Public Repository</name>
+          <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <checksumPolicy>warn</checksumPolicy>
+          </snapshots>
+        </repository>
+
+        <!-- Repositório legado da MuleSoft (Codehaus) -->
+        <repository>
+          <id>codehaus-mule-repo</id>
+          <name>Codehaus Mule Repository</name>
+          <url>https://repository-master.mulesoft.org/nexus/content/groups/public/</url>
+          <layout>default</layout>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+
+      </repositories>
+    </profile>
+  </profiles>
+
+  <!--
+  ============================================================================
+  🚀 PERFIL ATIVO POR PADRÃO
+  ============================================================================
+  -->
+  <activeProfiles>
+    <activeProfile>all-mule-repositories</activeProfile>
+  </activeProfiles>
+
+</settings>

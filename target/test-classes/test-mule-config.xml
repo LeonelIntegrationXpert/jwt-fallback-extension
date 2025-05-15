@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:multi-idp-jwt-validation="http://www.mulesoft.org/schema/mule/multi-idp-jwt-validation"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/multi-idp-jwt-validation http://www.mulesoft.org/schema/mule/multi-idp-jwt-validation/current/mule-multi-idp-jwt-validation.xsd">
+
+    <multi-idp-jwt-validation:config name="config" configId="configId">
+        <multi-idp-jwt-validation:connection requiredParameter="aValue" />
+    </multi-idp-jwt-validation:config>
+
+    <flow name="sayHiFlow">
+        <multi-idp-jwt-validation:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <multi-idp-jwt-validation:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
