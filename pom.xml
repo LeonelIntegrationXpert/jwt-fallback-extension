@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>806818a4-2582-4d63-a6ef-021f493715a0</groupId>
 	<artifactId>jwt-fallback-extension</artifactId>
-	<version>2.0.1</version>
+	<version>2.0.2</version>
 	<packaging>mule-extension</packaging>
 	<name>Multi IdP JWT Validation Extension</name>
 

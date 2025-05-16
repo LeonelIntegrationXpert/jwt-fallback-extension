@@ -46,3 +46,4 @@ test-output/
 # ============================================
 # Evite subir settings.xml com credenciais de Connected App
 # Use um settings.xml externo (ex: .maven/settings.xml) ignorado
+/bin/
