@@ -3,7 +3,7 @@
     "id": "java",
     "attributes": {
       "type": "com.leonel.mulesoft.security.jwtfallback.internal.MultiIdPJWTValidationExtension",
-      "version": "1.1.1"
+      "version": "2.0.1"
     }
   },
   "name": "Multi IdP JWT Validation",

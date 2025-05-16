@@ -1,14 +1,14 @@
 {
   "name": "Multi IdP JWT Validation",
   "description": "This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.",
-  "version": "1.1.1",
+  "version": "2.0.1",
   "vendor": "Mulesoft",
   "category": "COMMUNITY",
   "xmlDsl": {
     "prefix": "multi-idp-jwt-validation",
     "namespace": "http://www.mulesoft.org/schema/mule/multi-idp-jwt-validation",
     "schemaLocation": "http://www.mulesoft.org/schema/mule/multi-idp-jwt-validation/current/mule-multi-idp-jwt-validation.xsd",
-    "schemaVersion": "1.1.1",
+    "schemaVersion": "2.0.1",
     "xsdFileName": "mule-multi-idp-jwt-validation.xsd"
   },
   "resources": [],

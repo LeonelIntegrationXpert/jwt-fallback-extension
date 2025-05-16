@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ===============================================================================
-  ⚙️ MuleSoft settings.xml (Deploy no Exchange)
+  MuleSoft settings.xml (Deploy no Exchange)
 ===============================================================================
-  ✍️ Autor: Leonel Dorneles Porto
-  📧 Email: leoneldornelesporto@outlook.com.br
-  ☁️ Ambiente: Connected App (Ambiente Trial)
+  Autor    : Leonel Dorneles Porto
+  Email    : leoneldornelesporto@outlook.com.br
+  Ambiente : Connected App (Ambiente Trial)
 ===============================================================================
-  🔐 Este arquivo define:
-    - Credenciais para publicação no Anypoint Exchange via Maven.
-    - Repositórios padrão da MuleSoft.
-    - Plugin Group necessário para ferramentas Mule.
+  Descrição:
+    - Define as credenciais para publicação no Anypoint Exchange via Maven.
+    - Configura repositórios padrão da MuleSoft.
+    - Declara o grupo de plugins necessário para uso de ferramentas Mule.
 ===============================================================================
-  ❗ ATENÇÃO:
-    ➤ Substitua as credenciais de client_id e client_secret abaixo
-      quando estiver usando ambiente **produtivo**.
-    ➤ O formato da senha exige:
+  IMPORTANTE:
+    - Substitua as credenciais de client_id e client_secret abaixo
+      quando estiver utilizando ambiente produtivo.
+    - O formato correto da senha é:
         client_id~?~client_secret
 ===============================================================================
 -->
@@ -24,14 +24,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <!--
-  ============================================================================
-  🔐 CREDENCIAIS PARA PUBLICAÇÃO NO EXCHANGE
-  ============================================================================
-    - ID do servidor precisa bater com o valor do <distributionManagement> no POM.
-    - Formato da senha: client_id~?~client_secret
-    - Exemplo abaixo usa ambiente Trial do Leonel Dorneles Porto.
-  -->
+  <!-- Credenciais para publicação no Exchange (ID deve bater com o POM) -->
   <servers>
     <server>
       <id>anypoint-exchange-v3</id>
@@ -50,20 +43,12 @@
     </server>
   </servers>
 
-  <!--
-  ============================================================================
-  🧰 PLUGIN GROUPS PARA RECONHECER PLUGINS MULESOFT
-  ============================================================================
-  -->
+  <!-- Plugin Group necessário para plugins MuleSoft -->
   <pluginGroups>
     <pluginGroup>org.mule.tools</pluginGroup>
   </pluginGroups>
 
-  <!--
-  ============================================================================
-  🌍 REPOSITÓRIOS MULESOFT PARA RESOLVER DEPENDÊNCIAS
-  ============================================================================
-  -->
+  <!-- Repositórios MuleSoft para dependências e builds -->
   <profiles>
     <profile>
       <id>all-mule-repositories</id>
@@ -72,7 +57,7 @@
       </activation>
       <repositories>
 
-        <!-- Repositório público MuleSoft: archetypes, runtime, etc. -->
+        <!-- Repositório público da MuleSoft -->
         <repository>
           <id>archetype</id>
           <name>MuleSoft Public Repository</name>
@@ -106,11 +91,7 @@
     </profile>
   </profiles>
 
-  <!--
-  ============================================================================
-  🚀 PERFIL ATIVO POR PADRÃO
-  ============================================================================
-  -->
+  <!-- Perfil de repositórios ativo por padrão -->
   <activeProfiles>
     <activeProfile>all-mule-repositories</activeProfile>
   </activeProfiles>

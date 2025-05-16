@@ -1,0 +1,48 @@
+# ============================================
+# 🛠️ MuleSoft SDK Extension - .gitignore
+# ============================================
+
+# Diretório de build Maven
+target/
+
+# Configurações locais do Maven (se não for versionado intencionalmente)
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.m2/settings.xml
+
+# Arquivos temporários do Anypoint Studio
+.classpath
+.project
+.settings/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# Sistema Operacional e metadados ocultos
+.DS_Store
+Thumbs.db
+
+# Logs de execução
+*.log
+
+# Arquivos de backup
+*.bak
+*.swp
+*.swo
+
+# Arquivos temporários
+*.tmp
+*.lock
+
+# Output de testes
+coverage/
+test-output/
+
+# ============================================
+# 🔐 Dica: nunca versionar arquivos sensíveis
+# ============================================
+# Evite subir settings.xml com credenciais de Connected App
+# Use um settings.xml externo (ex: .maven/settings.xml) ignorado
