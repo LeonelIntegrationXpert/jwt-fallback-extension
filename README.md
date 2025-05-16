@@ -155,5 +155,5 @@ Este projeto é de código aberto e foi desenvolvido por **Leonel Dorneles Porto
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=47E3FF&center=true&vCenter=true&width=800&lines=Obrigado+por+visitar+🚀+;Conecte-se+no+LinkedIn+com+Leonel+Dorneles+Porto"/>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=47E3FF&center=true&vCenter=true&width=800&lines=Obrigado+por+visitar+🚀+;Conecte-se+no+LinkedIn+com+Leonel+Dorneles+Porto"/>
 </p>
